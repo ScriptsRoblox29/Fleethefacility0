@@ -18,7 +18,7 @@ local Window = Rayfield:CreateWindow({
     },
  
  
-    KeySystem = true, -- Set this to true to use our key system
+    KeySystem = false, -- Set this to true to use our key system
     KeySettings = {
        Title = "Key",
        Subtitle = "Key System",
@@ -42,15 +42,9 @@ local Window = Rayfield:CreateWindow({
  local aimbotTab = Window:CreateTab("Main", "crosshair")
  
  local Section = aimbotTab:CreateSection("Main")
- 
- 
- 
- 
- 
- local visualsTab = Window:CreateTab("Visuals", "crosshair")
- 
- local Sectionlocal Button = Tab:CreateButton({
-   Name = "Get all PETAL ❤️",
+
+ local Sectionlocal Button = aimbotTab:CreateButton({
+   Name = "Get all PETAL",
    Callback = function()
        local player = game.Players.LocalPlayer
        if not player or not player.Character or not player.Character:FindFirstChild("HumanoidRootPart") then return end
@@ -73,6 +67,10 @@ local Window = Rayfield:CreateWindow({
            end
        end
    end,
+ 
+ 
+ local visualsTab = Window:CreateTab("Visuals", "crosshair")
+ 
 }) = visualsTab:CreateSection("This is visual, meaning it doesn't appear to the entire server, just you.")
  
  
